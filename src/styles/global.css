@@ -1,0 +1,54 @@
+@layer reset, tokens, base;
+
+@import "kiso.css" layer(reset);
+@import "./uchu.css" layer(tokens);
+
+/* ===== Design Tokens ===== */
+
+@layer tokens {
+  :root {
+    color-scheme: light dark;
+
+    --c-bg: light-dark(var(--uchu-yang), var(--uchu-yin));
+    --c-text: light-dark(var(--uchu-yin), var(--uchu-gray-1));
+    --c-sub: light-dark(var(--uchu-yin-6), var(--uchu-yin-4));
+    --c-border: light-dark(
+      var(--uchu-gray-2),
+      oklch(var(--uchu-yang-raw) / 10%)
+    );
+
+    --fs-sm: 0.875rem;
+    --fw-normal: 400;
+    --fw-medium: 500;
+  }
+}
+
+/* ===== Base Styles ===== */
+
+@layer base {
+  * {
+    border-color: var(--c-border);
+  }
+
+  html {
+    font-family: system-ui, sans-serif;
+    scrollbar-gutter: stable both-edges;
+    scrollbar-color: light-dark(var(--uchu-gray-3), var(--uchu-yin-8))
+      transparent;
+    scrollbar-width: thin;
+    background-color: var(--c-bg);
+    color: var(--c-text);
+  }
+
+  ::selection {
+    box-shadow: none;
+    background-color: light-dark(var(--uchu-gray-3), var(--uchu-yin-9));
+    color: var(--c-text);
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}

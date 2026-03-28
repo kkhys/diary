@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check && tsc --noEmit",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "deploy": "pnpm build && wrangler pages deploy dist"
+  },
+  "dependencies": {
+    "@astrojs/check": "0.9.8",
+    "@astrojs/sitemap": "3.7.2",
+    "astro": "6.1.1",
+    "kiso.css": "1.2.4",
+    "sharp": "0.34.5"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.9",
+    "typescript": "6.0.2",
+    "wrangler": "4.78.0"
+  }
+}
