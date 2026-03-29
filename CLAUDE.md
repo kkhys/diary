@@ -1,13 +1,15 @@
 # CLAUDE.md
 
-Photo diary site (diary.kkhys.me). Astro 6 static site on Cloudflare Pages. TypeScript strictest mode. Vanilla CSS (kiso.css reset + uchu.css OKLCH palette). Path alias: `#/*` → `./src/*`.
+Photo diary site (diary.kkhys.me). Astro 6 static site on Cloudflare Pages. TypeScript strictest mode. Vanilla CSS (kiso.css reset + uchu.css OKLCH palette). Light theme only. Path alias: `#/*` → `./src/*`.
 
 ## Project Map
 
 - `src/pages/` — Astro pages
-- `src/layouts/` — Layout components
-- `src/styles/` — Global CSS with light-dark() theme switching
+- `src/layouts/` — Layout components (SEO/OGP meta tags in base-layout)
+- `src/components/` — Reusable components
+- `src/styles/` — Global CSS (light theme only)
 - `public/` — Static assets (images, robots.txt)
+- `diary-content/` — Submodule with diary photos (not checked out in CI)
 
 ## How to Work
 
