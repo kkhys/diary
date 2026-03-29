@@ -26,6 +26,7 @@
             packages = [
               pkgs.nodejs_24
               pkgs.pnpm
+              pkgs.bun
             ];
 
             shellHook = ''
