@@ -10,6 +10,7 @@
   "schedule": ["after 1am and before 6am"],
   "dependencyDashboard": true,
   "assignees": ["kkhys"],
+  "minimumReleaseAge": "3 days",
   "labels": ["type: bump-version"],
   "assignAutomerge": true,
   "packageRules": [
